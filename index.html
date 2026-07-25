@@ -131,6 +131,21 @@ h1{font-family:'Archivo',sans-serif;font-size:clamp(38px,5.4vw,64px);font-weight
 .news-date{font-size:13.5px;color:#C7B3F2;padding-top:2px;font-weight:600}
 .news-item b{color:#fff;font-weight:600}
 
+/* ---------- publications ---------- */
+.section.light + .section.light{border-top:1px solid #E7E5EC}
+.section.light .fbtn{border:1px solid #D8D4E2;color:#3a3344}
+.section.light .fbtn:hover{border-color:#4C1D95;color:#4C1D95}
+.section.light .fbtn.active{background:#25084D;color:#fff;border-color:#25084D;font-weight:600}
+.pub-list{list-style:none}
+.pub{border-bottom:1px solid #E7E5EC}
+.pub:first-child{border-top:1px solid #E7E5EC}
+.pub > a, .pub > div{display:block;padding:18px 0}
+.pub-t{display:block;font-weight:600;color:#25084D;font-size:16px;line-height:1.45}
+.pub a:hover .pub-t{color:#4C1D95;text-decoration:underline}
+.pub-m{display:block;font-size:13.5px;color:#5f5768;margin-top:5px}
+.pub-v{display:block;font-size:13px;color:#4C1D95;font-weight:600;margin-top:3px}
+.pub.hidden{display:none}
+
 /* ---------- join ---------- */
 .join{background:#1D0640;color:#fff;text-align:left;border-top:3px solid #A78BFA}
 .join .label{color:var(--lilac)}
@@ -233,6 +248,7 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
       <a href="#projects">Projects</a>
       <a href="#team">Team</a>
       <a href="#news">News</a>
+      <a href="#publications">Publications</a>
       <a href="#join">Vacancies</a>
     </div>
   </div>
@@ -465,6 +481,56 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
   </div>
 </section>
 
+<section class="section light" id="publications">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">Publications</span>
+      <h2>Recent publications</h2>
+      <p>Peer-reviewed output from the group's academics over the last three years. Click any entry for the published version.</p>
+    </div>
+    <div class="filter-bar" id="pub-filters">
+      <button class="fbtn active" data-pfilter="all">All</button>
+      <button class="fbtn" data-pfilter="sel">Selected</button>
+      <button class="fbtn" data-pfilter="2026">2026</button>
+      <button class="fbtn" data-pfilter="2025">2025</button>
+      <button class="fbtn" data-pfilter="2024">2024</button>
+    </div>
+    <ul class="pub-list" id="pub-list">
+      <li class="pub" data-year="2026"><a href="https://doi.org/10.1109/tii.2026.3675738" target="_blank" rel="noopener"><span class="pub-t">Automated UAV Controller Synthesis via LLM-Generated Control Logic and Particle Swarm Optimization</span><span class="pub-m">Christopher Carr, Miguel Martínez-García, Benjamin James Marshall, Matthew Coombes, Eve Zhang</span><span class="pub-v">IEEE Transactions on Industrial Informatics &middot; 2026</span></a></li>
+      <li class="pub" data-year="2026"><a href="https://doi.org/10.1016/j.oceaneng.2026.124313" target="_blank" rel="noopener"><span class="pub-t">Auto-optimization of energy generation for wave energy converters with active learning</span><span class="pub-m">Siyang Tang, Wen-Hua Chen, Cunjia Liu</span><span class="pub-v">Ocean Engineering &middot; 2026</span></a></li>
+      <li class="pub" data-year="2026"><a href="https://doi.org/10.1016/j.aiia.2026.05.003" target="_blank" rel="noopener"><span class="pub-t">CTNet: A cognitive-inspired TriPercept CrossFusion self-distillation model for image classification in agricultural field</span><span class="pub-m">Bo Han, Heguang Sun, Wenqian Tang, H. Mai, Changsheng Li, Y Zhang, Zhangjun Kou, Haofeng Qiu et al.</span><span class="pub-v">Artificial Intelligence in Agriculture &middot; 2026</span></a></li>
+      <li class="pub" data-year="2026" data-sel="1"><a href="https://doi.org/10.1109/tase.2026.3679278" target="_blank" rel="noopener"><span class="pub-t">Dual Control for Active Estimation and Path Planning in the Automation of Robotic Assembly Tasks</span><span class="pub-m">Promod Pashupathy, Matthew Coombes, Wen‐Hua Chen, Dan Lake, Yalei Yu, Cong Sun, Masoud Bahraini, Peter Kinnell et al.</span><span class="pub-v">IEEE Transactions on Automation Science and Engineering &middot; 2026</span></a></li>
+      <li class="pub" data-year="2026" data-sel="1"><a href="https://doi.org/10.1109/tcyb.2026.3660400" target="_blank" rel="noopener"><span class="pub-t">k-Step Look-Ahead Active Concurrent Learning-Based Dual Control of Exploration and Exploitation for Auto-Optimization</span><span class="pub-m">Yalei Yu, Jingjing Jiang, Wen-Hua Chen, Yuefei Zuo</span><span class="pub-v">IEEE Transactions on Cybernetics &middot; 2026</span></a></li>
+      <li class="pub" data-year="2026"><a href="https://doi.org/10.3390/electronics15132898" target="_blank" rel="noopener"><span class="pub-t">Lyapunov Stability Analysis of a Generated UAV Controller</span><span class="pub-m">Christopher Carr, Miguel Martínez-García, Matthew Coombes, Yu Zhang</span><span class="pub-v">Electronics &middot; 2026</span></a></li>
+      <li class="pub" data-year="2025"><a href="https://doi.org/10.3390/app15052615" target="_blank" rel="noopener"><span class="pub-t">A Vision-Guided Deep Learning Framework for Dexterous Robotic Grasping Using Gaussian Processes and Transformers</span><span class="pub-m">Suhas Kadalagere Sampath, Ning Wang, Chenguang Yang, Howard H. Wu, Cunjia Liu, Martin J. Pearson</span><span class="pub-v">Applied Sciences &middot; 2025</span></a></li>
+      <li class="pub" data-year="2025"><a href="https://doi.org/10.1016/j.apor.2025.104458" target="_blank" rel="noopener"><span class="pub-t">Adaptive informative path planning for active reconstruction of spatio-temporal water pollution dispersion using Unmanned Surface Vehicles</span><span class="pub-m">Song Ma, Cunjia Liu, Christopher M. Harvey, Richard Bucknall, Yuanchang Liu</span><span class="pub-v">Applied Ocean Research &middot; 2025</span></a></li>
+      <li class="pub" data-year="2025"><a href="https://doi.org/10.1016/j.apenergy.2024.125197" target="_blank" rel="noopener"><span class="pub-t">An explicit predictive controller for fuel-cell electric vehicles incorporating the hierarchical architecture</span><span class="pub-m">Zewei Jiang, Zhuoran Hou, Liang Chu, Di Zhao, Jingjing Jiang, Jun Yang, Yuanjian Zhang</span><span class="pub-v">Applied Energy &middot; 2025</span></a></li>
+      <li class="pub" data-year="2025"><a href="https://doi.org/10.1016/j.jclepro.2025.145251" target="_blank" rel="noopener"><span class="pub-t">Approximate the optimal energy management strategy for plug-in hybrid electric vehicle from the constant-sum game</span><span class="pub-m">Jincheng Hu, Lin Yang, Tong He, Quan Zhou, Zheng Chen, Yonggang Liu, Jingjing Jiang, Yuanjian Zhang</span><span class="pub-v">Journal of Cleaner Production &middot; 2025</span></a></li>
+      <li class="pub" data-year="2025"><a href="https://doi.org/10.3390/s25216531" target="_blank" rel="noopener"><span class="pub-t">Design of a Modularized IoT Multi-Functional Sensing System and Data Pipeline for Digital Twin-Oriented Real-Time Aircraft Structural Health Monitoring</span><span class="pub-m">Shengkai Guo, Andrew West, Jan Papuga, Stephanos Theodossiades, Jingjing Jiang</span><span class="pub-v">Sensors &middot; 2025</span></a></li>
+      <li class="pub" data-year="2025"><a href="https://doi.org/10.1109/tcyb.2025.3535159" target="_blank" rel="noopener"><span class="pub-t">High-Level Decision Making in a Hierarchical Control Framework: Integrating HMDP and MPC for Autonomous Systems</span><span class="pub-m">Xuefang Wang, Jingjing Jiang, Wen‐Hua Chen</span><span class="pub-v">IEEE Transactions on Cybernetics &middot; 2025</span></a></li>
+      <li class="pub" data-year="2025"><a href="https://doi.org/10.1016/j.geits.2025.100300" target="_blank" rel="noopener"><span class="pub-t">Intelligent Energy Management for the Fuel Cell Electric Vehicle: A Real-time, Deep Reinforcement Learning Application to Multi-Objective Optimization</span><span class="pub-m">Jincheng Hu, Pengyu Fu, Jihao Li, Jingjing Jiang, Quan Zhou, Yonggang Liu, Zheng Chen, Yuanjian Zhang</span><span class="pub-v">Green Energy and Intelligent Transportation &middot; 2025</span></a></li>
+      <li class="pub" data-year="2025"><a href="https://doi.org/10.3390/s25020402" target="_blank" rel="noopener"><span class="pub-t">Intelligent Wireless Sensor Network Sensor Selection and Clustering for Tracking Unmanned Aerial Vehicles</span><span class="pub-m">Edward-Joseph Cefai, Matthew Coombes, Daniel O’Boy</span><span class="pub-v">Sensors &middot; 2025</span></a></li>
+      <li class="pub" data-year="2025"><a href="https://doi.org/10.1109/tmech.2025.3625915" target="_blank" rel="noopener"><span class="pub-t">Learning-Based Methods for Aerial Manipulation: A Focused Review</span><span class="pub-m">Chao Zeng, Zhan Li, Yipeng Yang, Cunjia Liu, Chenguang Yang</span><span class="pub-v">IEEE/ASME Transactions on Mechatronics &middot; 2025</span></a></li>
+      <li class="pub" data-year="2025"><a href="https://doi.org/10.1109/ojcsys.2025.3600925" target="_blank" rel="noopener"><span class="pub-t">MDP-Based High-Level Decision-Making for Combining Safety and Optimality: Autonomous Overtaking</span><span class="pub-m">Xuefang Wang, Jingjing Jiang, Wen‐Hua Chen</span><span class="pub-v">IEEE Open Journal of Control Systems &middot; 2025</span></a></li>
+      <li class="pub" data-year="2025"><a href="https://doi.org/10.1109/taes.2025.3631768" target="_blank" rel="noopener"><span class="pub-t">Multi-UAV Search and Rescue in Wilderness Using Smart Agent-Based Probability Models</span><span class="pub-m">Zijian Ge, Jingjing Jiang, Matthew Coombes</span><span class="pub-v">IEEE Transactions on Aerospace and Electronic Systems &middot; 2025</span></a></li>
+      <li class="pub" data-year="2025"><a href="https://doi.org/10.1142/s230138502544011x" target="_blank" rel="noopener"><span class="pub-t">No Worries About Misdetection: A Safe Intelligent Driver Model</span><span class="pub-m">Zheyu Zhang, Jingjing Jiang, Wen‐Hua Chen</span><span class="pub-v">Unmanned Systems &middot; 2025</span></a></li>
+      <li class="pub" data-year="2025" data-sel="1"><a href="https://doi.org/10.1038/s41586-025-09575-x" target="_blank" rel="noopener"><span class="pub-t">Proximal cooperative aerial manipulation with vertically stacked drones</span><span class="pub-m">Huazi Cao, Jiahao Shen, Yin Zhang, Zhengping Fu, Cunjia Liu, Sihao Sun, Shiyu Zhao</span><span class="pub-v">Nature &middot; 2025</span></a></li>
+      <li class="pub" data-year="2025"><a href="https://doi.org/10.1109/tmech.2025.3577488" target="_blank" rel="noopener"><span class="pub-t">Redundant Observer-Based Tracking Control for Object Extraction Using a Cable Connected UAV</span><span class="pub-m">Benjamin James Marshall, Yunda Yan, James Knowles, Chenguang Yang, Cunjia Liu</span><span class="pub-v">IEEE/ASME Transactions on Mechatronics &middot; 2025</span></a></li>
+      <li class="pub" data-year="2024"><a href="https://doi.org/10.1109/tte.2024.3369081" target="_blank" rel="noopener"><span class="pub-t">A Novel Dual-Model MPC-Based Energy Management Strategy for Fuel Cell Electric Vehicle</span><span class="pub-m">Zhuoran Hou, Liang Chu, Weiming Du, Jincheng Hu, Jingjing Jiang, Jun Yang, Yuanjian Zhang</span><span class="pub-v">IEEE Transactions on Transportation Electrification &middot; 2024</span></a></li>
+      <li class="pub" data-year="2024" data-sel="1"><a href="https://doi.org/10.1109/tnnls.2024.3349467" target="_blank" rel="noopener"><span class="pub-t">Cooperative Active Learning-Based Dual Control for Exploration and Exploitation in Autonomous Search</span><span class="pub-m">Zhongguo Li, Wen‐Hua Chen, Jun Yang, Cunjia Liu</span><span class="pub-v">IEEE Transactions on Neural Networks and Learning Systems &middot; 2024</span></a></li>
+      <li class="pub" data-year="2024" data-sel="1"><a href="https://doi.org/10.1016/j.inffus.2024.102503" target="_blank" rel="noopener"><span class="pub-t">Distributed multi-robot source term estimation with coverage control and information theoretic based coordination</span><span class="pub-m">Rohit V. Nanavati, Matthew Coombes, Cunjia Liu</span><span class="pub-v">Information Fusion &middot; 2024</span></a></li>
+      <li class="pub" data-year="2024"><a href="https://doi.org/10.1007/s12369-024-01193-3" target="_blank" rel="noopener"><span class="pub-t">Enhancing Swift and Socially-Aware Navigation with Continuous Spatial-Temporal Routing</span><span class="pub-m">Zijian Ge, Jingjing Jiang, Matthew Coombes, Sun Liang</span><span class="pub-v">International Journal of Social Robotics &middot; 2024</span></a></li>
+      <li class="pub" data-year="2024"><a href="https://doi.org/10.1049/itr2.12507" target="_blank" rel="noopener"><span class="pub-t">High‐level decision‐making for autonomous overtaking: An MPC‐based switching control approach</span><span class="pub-m">Xuefang Wang, Wen‐Hua Chen, Jingjing Jiang, Yunda Yan</span><span class="pub-v">IET Intelligent Transport Systems &middot; 2024</span></a></li>
+      <li class="pub" data-year="2024"><a href="https://doi.org/10.1109/tase.2024.3382296" target="_blank" rel="noopener"><span class="pub-t">Motion Planning for Aerial Pick-and-Place With Geometric Feasibility Constraints</span><span class="pub-m">Huazi Cao, Jiahao Shen, Cunjia Liu, Bo Zhu, Shiyu Zhao</span><span class="pub-v">IEEE Transactions on Automation Science and Engineering &middot; 2024</span></a></li>
+      <li class="pub" data-year="2024"><a href="https://doi.org/10.1109/lra.2024.3475044" target="_blank" rel="noopener"><span class="pub-t">PointNetPGAP-SLC: A 3D LiDAR-Based Place Recognition Approach With Segment-Level Consistency Training for Mobile Robots in Horticulture</span><span class="pub-m">Tiago Barros, Luís Garrote, P. Conde, Matthew Coombes, Cunjia Liu, Cristiano Premebida, Urbano Nunes</span><span class="pub-v">IEEE Robotics and Automation Letters &middot; 2024</span></a></li>
+      <li class="pub" data-year="2024"><a href="https://doi.org/10.1109/tiv.2024.3483962" target="_blank" rel="noopener"><span class="pub-t">PPUM-Aided Receding Horizon Optimization for Robot Path planning in Uncertain Environments</span><span class="pub-m">Zijian Ge, Jingjing Jiang, Matthew Coombes, Liang Sun</span><span class="pub-v">IEEE Transactions on Intelligent Vehicles &middot; 2024</span></a></li>
+      <li class="pub" data-year="2024"><a href="https://doi.org/10.1016/j.jfranklin.2024.107198" target="_blank" rel="noopener"><span class="pub-t">Probability hypothesis density filter for parameter estimation of multiple hazardous sources</span><span class="pub-m">Abdullahi Daniyan, Cunjia Liu, Wen‐Hua Chen</span><span class="pub-v">Journal of the Franklin Institute &middot; 2024</span></a></li>
+      <li class="pub" data-year="2024" data-sel="1"><a href="https://doi.org/10.1109/tac.2024.3496572" target="_blank" rel="noopener"><span class="pub-t">Safety-Critical Disturbance Rejection Control of Nonlinear Systems With Unmatched Disturbances</span><span class="pub-m">Xinming Wang, Jun Yang, Cunjia Liu, Yunda Yan, Shihua Li</span><span class="pub-v">IEEE Transactions on Automatic Control &middot; 2024</span></a></li>
+      <li class="pub" data-year="2024"><a href="https://doi.org/10.1016/j.procir.2024.10.170" target="_blank" rel="noopener"><span class="pub-t">Technical and System Requirements for Industrial Robot-as-a-Service (IRaaS)</span><span class="pub-m">Mohammed M. Mabkhot, Myles Flanagan, Masoud S. Bahraini, Yalei Yu, Cong Sun, Matthew Coombes, Peter Kinnell, Wen‐Hua Chen et al.</span><span class="pub-v">Procedia CIRP &middot; 2024</span></a></li>
+    </ul>
+  </div>
+</section>
+
 <section class="section join" id="join">
   <div class="wrap">
     <span class="label">Vacancies</span>
@@ -559,13 +625,27 @@ function linkLabel(href){
   return 'Personal site \u2192';
 }
 
-document.querySelectorAll('.fbtn').forEach(b=>{
+document.querySelectorAll('#team .fbtn').forEach(b=>{
   b.addEventListener('click', ()=>{
-    document.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('#team .fbtn').forEach(x=>x.classList.remove('active'));
     b.classList.add('active');
     const f = b.dataset.filter;
     document.querySelectorAll('#members-grid .person').forEach(p=>{
       p.classList.toggle('hidden', f!=='all' && p.dataset.cat!==f);
+    });
+  });
+});
+
+document.querySelectorAll('#pub-filters .fbtn').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    document.querySelectorAll('#pub-filters .fbtn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    const f = b.dataset.pfilter;
+    document.querySelectorAll('#pub-list .pub').forEach(p=>{
+      let show = true;
+      if (f === 'sel') show = p.hasAttribute('data-sel');
+      else if (f !== 'all') show = p.dataset.year === f;
+      p.classList.toggle('hidden', !show);
     });
   });
 });
