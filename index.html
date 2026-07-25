@@ -534,6 +534,7 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
       <li class="pub" data-year="2018" data-sel="1" data-old="1"><a href="https://doi.org/10.1016/j.compag.2018.10.017" target="_blank" rel="noopener"><span class="pub-t">Wheat yellow rust monitoring by learning from multispectral UAV aerial imagery</span><span class="pub-m">Jinya Su, Cunjia Liu, Matthew Coombes, Xiaoping Hu, Conghao Wang, Xiangming Xu, Qingdong Li, Lei Guo et al.</span><span class="pub-v">Computers and Electronics in Agriculture &middot; 2018</span></a></li>
       <li class="pub" data-year="2011" data-sel="1" data-old="1"><a href="https://doi.org/10.1016/j.conengprac.2011.10.015" target="_blank" rel="noopener"><span class="pub-t">Tracking control of small-scale helicopters using explicit nonlinear MPC augmented with disturbance observers</span><span class="pub-m">Cunjia Liu, Wen‐Hua Chen, John Andrews</span><span class="pub-v">Control Engineering Practice &middot; 2011</span></a></li>
     </ul>
+    <button class="fbtn" id="pub-more" style="margin-top:26px"></button>
   </div>
 </section>
 
@@ -642,21 +643,42 @@ document.querySelectorAll('#team .fbtn').forEach(b=>{
   });
 });
 
+const pubState = { filter: 'all', expanded: false };
+const PUB_LIMIT = 8;
+function applyPubs(){
+  const f = pubState.filter;
+  const matched = [];
+  document.querySelectorAll('#pub-list .pub').forEach(p=>{
+    let m = true;
+    if (f === 'sel') m = p.hasAttribute('data-sel');
+    else if (f === 'all') m = !p.hasAttribute('data-old');
+    else m = p.dataset.year === f;
+    if (m) matched.push(p);
+    p.classList.toggle('hidden', !m);
+  });
+  if (!pubState.expanded && matched.length > PUB_LIMIT){
+    matched.slice(PUB_LIMIT).forEach(p=>p.classList.add('hidden'));
+  }
+  const btn = document.getElementById('pub-more');
+  if (matched.length > PUB_LIMIT){
+    btn.style.display = 'inline-block';
+    btn.textContent = pubState.expanded ? 'Show fewer' : 'Show all ' + matched.length;
+  } else { btn.style.display = 'none'; }
+}
 document.querySelectorAll('#pub-filters .fbtn').forEach(b=>{
   b.addEventListener('click', ()=>{
     document.querySelectorAll('#pub-filters .fbtn').forEach(x=>x.classList.remove('active'));
     b.classList.add('active');
-    const f = b.dataset.pfilter;
-    document.querySelectorAll('#pub-list .pub').forEach(p=>{
-      let show = true;
-      if (f === 'sel') show = p.hasAttribute('data-sel');
-      else if (f === 'all') show = !p.hasAttribute('data-old');
-      else show = p.dataset.year === f;
-      p.classList.toggle('hidden', !show);
-    });
+    pubState.filter = b.dataset.pfilter;
+    pubState.expanded = false;
+    applyPubs();
   });
 });
-document.querySelectorAll('#pub-list .pub[data-old]').forEach(p=>p.classList.add('hidden'));
+document.getElementById('pub-more').addEventListener('click', ()=>{
+  pubState.expanded = !pubState.expanded;
+  applyPubs();
+});
+applyPubs();
 
 document.querySelectorAll('#team .person').forEach(p=>{
   p.style.cursor='pointer';
