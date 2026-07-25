@@ -486,7 +486,7 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
     <div class="section-head">
       <span class="label">Publications</span>
       <h2>Recent publications</h2>
-      <p>Peer-reviewed output from the group's academics over the last three years. Click any entry for the published version.</p>
+      <p>Peer-reviewed output from the group's academics over the last three years, together with a selection of the group's most influential earlier work. Click any entry for the published version.</p>
     </div>
     <div class="filter-bar" id="pub-filters">
       <button class="fbtn active" data-pfilter="all">All</button>
@@ -527,6 +527,12 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
       <li class="pub" data-year="2024"><a href="https://doi.org/10.1016/j.jfranklin.2024.107198" target="_blank" rel="noopener"><span class="pub-t">Probability hypothesis density filter for parameter estimation of multiple hazardous sources</span><span class="pub-m">Abdullahi Daniyan, Cunjia Liu, Wen‐Hua Chen</span><span class="pub-v">Journal of the Franklin Institute &middot; 2024</span></a></li>
       <li class="pub" data-year="2024" data-sel="1"><a href="https://doi.org/10.1109/tac.2024.3496572" target="_blank" rel="noopener"><span class="pub-t">Safety-Critical Disturbance Rejection Control of Nonlinear Systems With Unmatched Disturbances</span><span class="pub-m">Xinming Wang, Jun Yang, Cunjia Liu, Yunda Yan, Shihua Li</span><span class="pub-v">IEEE Transactions on Automatic Control &middot; 2024</span></a></li>
       <li class="pub" data-year="2024"><a href="https://doi.org/10.1016/j.procir.2024.10.170" target="_blank" rel="noopener"><span class="pub-t">Technical and System Requirements for Industrial Robot-as-a-Service (IRaaS)</span><span class="pub-m">Mohammed M. Mabkhot, Myles Flanagan, Masoud S. Bahraini, Yalei Yu, Cong Sun, Matthew Coombes, Peter Kinnell, Wen‐Hua Chen et al.</span><span class="pub-v">Procedia CIRP &middot; 2024</span></a></li>
+      <li class="pub" data-year="2022" data-sel="1" data-old="1"><a href="https://doi.org/10.1109/jas.2022.105410" target="_blank" rel="noopener"><span class="pub-t">Unmanned Aerial Vehicles: Control Methods and Future Challenges</span><span class="pub-m">Zongyu Zuo, Cunjia Liu, Qing‐Long Han, Jiawei Song</span><span class="pub-v">IEEE/CAA Journal of Automatica Sinica &middot; 2022</span></a></li>
+      <li class="pub" data-year="2021" data-sel="1" data-old="1"><a href="https://doi.org/10.1109/tnnls.2021.3116713" target="_blank" rel="noopener"><span class="pub-t">Reinforcement Learning-Based Fixed-Time Trajectory Tracking Control for Uncertain Robotic Manipulators With Input Saturation</span><span class="pub-m">Shengjie Cao, Liang Sun, Jingjing Jiang, Zongyu Zuo</span><span class="pub-v">IEEE Transactions on Neural Networks and Learning Systems &middot; 2021</span></a></li>
+      <li class="pub" data-year="2020" data-sel="1" data-old="1"><a href="https://doi.org/10.1109/tcst.2020.2980727" target="_blank" rel="noopener"><span class="pub-t">Optimal Path Following for Small Fixed-Wing UAVs Under Wind Disturbances</span><span class="pub-m">Jun Yang, Cunjia Liu, Matthew Coombes, Yunda Yan, Wen‐Hua Chen</span><span class="pub-v">IEEE Transactions on Control Systems Technology &middot; 2020</span></a></li>
+      <li class="pub" data-year="2018" data-sel="1" data-old="1"><a href="https://doi.org/10.1109/tcst.2018.2860548" target="_blank" rel="noopener"><span class="pub-t">Information-Based Search for an Atmospheric Release Using a Mobile Robot: Algorithm and Experiments</span><span class="pub-m">Michael Hutchinson, Cunjia Liu, Wen‐Hua Chen</span><span class="pub-v">IEEE Transactions on Control Systems Technology &middot; 2018</span></a></li>
+      <li class="pub" data-year="2018" data-sel="1" data-old="1"><a href="https://doi.org/10.1016/j.compag.2018.10.017" target="_blank" rel="noopener"><span class="pub-t">Wheat yellow rust monitoring by learning from multispectral UAV aerial imagery</span><span class="pub-m">Jinya Su, Cunjia Liu, Matthew Coombes, Xiaoping Hu, Conghao Wang, Xiangming Xu, Qingdong Li, Lei Guo et al.</span><span class="pub-v">Computers and Electronics in Agriculture &middot; 2018</span></a></li>
+      <li class="pub" data-year="2011" data-sel="1" data-old="1"><a href="https://doi.org/10.1016/j.conengprac.2011.10.015" target="_blank" rel="noopener"><span class="pub-t">Tracking control of small-scale helicopters using explicit nonlinear MPC augmented with disturbance observers</span><span class="pub-m">Cunjia Liu, Wen‐Hua Chen, John Andrews</span><span class="pub-v">Control Engineering Practice &middot; 2011</span></a></li>
     </ul>
   </div>
 </section>
@@ -644,11 +650,13 @@ document.querySelectorAll('#pub-filters .fbtn').forEach(b=>{
     document.querySelectorAll('#pub-list .pub').forEach(p=>{
       let show = true;
       if (f === 'sel') show = p.hasAttribute('data-sel');
-      else if (f !== 'all') show = p.dataset.year === f;
+      else if (f === 'all') show = !p.hasAttribute('data-old');
+      else show = p.dataset.year === f;
       p.classList.toggle('hidden', !show);
     });
   });
 });
+document.querySelectorAll('#pub-list .pub[data-old]').forEach(p=>p.classList.add('hidden'));
 
 document.querySelectorAll('#team .person').forEach(p=>{
   p.style.cursor='pointer';
