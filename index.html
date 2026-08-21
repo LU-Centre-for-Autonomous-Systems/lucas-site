@@ -39,11 +39,10 @@ h2::after{content:"";position:absolute;left:0;bottom:0;width:44px;height:3px;bac
 
 /* ---------- nav ---------- */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;border-top:3px solid #A78BFA;background:rgba(24,5,50,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.12)}
-.nav-inner{max-width:var(--max);margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:13px}
-.logo img{height:40px;width:auto}
-.logo-text{font-family:'Archivo',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.005em;color:#fff;line-height:1.15}
-.logo-text small{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:10.5px;letter-spacing:.08em;color:#BDAEDD;text-transform:uppercase}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 32px;height:84px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:18px}
+.logo img{height:54px;width:auto}
+.logo-text{font-family:'Archivo',sans-serif;font-weight:700;font-size:21px;letter-spacing:.01em;color:#fff;line-height:1;padding-left:18px;border-left:1px solid rgba(255,255,255,.28)}
 .nav-links{display:flex;gap:30px;font-size:14.5px;font-weight:500}
 .nav-links a{color:#EDE8F8;opacity:.8;transition:opacity .15s,color .15s}
 .nav-links a{padding-bottom:4px;border-bottom:2px solid transparent}
@@ -167,13 +166,9 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
 .foot-grid p,.foot-grid li{font-size:14px;line-height:1.85}
 .foot-grid ul{list-style:none}
 .foot-grid a:hover{color:#fff;text-decoration:underline}
-.foot-brand{display:flex;align-items:center;gap:13px;margin-bottom:16px}
-.foot-brand img{height:44px}
-.foot-brand div{font-family:'Archivo',sans-serif;font-weight:700;font-size:22px;color:#fff}
-.lboro-mark{display:flex;align-items:center;gap:12px;margin:6px 0 18px;padding:10px 0}
-.lboro-mark img{height:44px;width:auto;background:#fff;padding:6px 10px;border-radius:4px}
-.lboro-mark span{display:none}
-.lboro-mark.text-only span{display:block;font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;line-height:1.25;color:#fff;letter-spacing:.02em;border-left:3px solid var(--lilac);padding-left:12px}
+.foot-brand{display:flex;align-items:center;gap:18px;margin-bottom:20px}
+.foot-brand img{height:60px;width:auto}
+.foot-brand div{font-family:'Archivo',sans-serif;font-weight:700;font-size:22px;color:#fff;padding-left:18px;border-left:1px solid rgba(255,255,255,.28);line-height:1}
 .foot-bottom{margin-top:56px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:#8F84B8}
 
 /* ---------- responsive ---------- */
@@ -186,7 +181,7 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
   .names-cols{columns:2}
 }
 @media (max-width:680px){
-  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#1E073E;border-bottom:1px solid rgba(255,255,255,.12);flex-direction:column;gap:0;padding:8px 32px 20px}
+  .nav-links{display:none;position:absolute;top:84px;left:0;right:0;background:#1E073E;border-bottom:1px solid rgba(255,255,255,.12);flex-direction:column;gap:0;padding:8px 32px 20px}
   .nav-links.open{display:flex}
   .nav-links a{padding:12px 0;border-top:1px solid rgba(255,255,255,.12)}
   .menu-btn{display:block}
@@ -238,8 +233,8 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
 <nav>
   <div class="nav-inner">
     <a href="#top" class="logo">
-      <img src="images/logopic/LUCAS_Logo.png" alt="LUCAS logo">
-      <span class="logo-text">LUCAS<small>Loughborough University</small></span>
+      <img src="images/logopic/lucas-lockup-white.png" alt="Loughborough University Centre for Autonomous Systems">
+      <span class="logo-text">LUCAS</span>
     </a>
     <button class="menu-btn" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">Menu</button>
     <div class="nav-links">
@@ -565,16 +560,10 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
     <div class="foot-grid">
       <div>
         <div class="foot-brand">
-          <img src="images/logopic/LUCAS_Logo.png" alt="LUCAS logo">
+          <img src="images/logopic/lucas-lockup-white.png" alt="Loughborough University Centre for Autonomous Systems">
           <div>LUCAS</div>
         </div>
-        <div class="lboro-mark" id="lboro-mark">
-          <img src="images/lboro-logo.png" alt="Loughborough University" onerror="this.parentElement.classList.add('text-only');this.remove()">
-          <span>Loughborough<br>University</span>
-        </div>
         <p>We are part of the <a href="https://www.lboro.ac.uk/departments/aae/" style="text-decoration:underline">Department of Aeronautical and Automotive Engineering</a> at <a href="https://www.lboro.ac.uk" style="text-decoration:underline">Loughborough University</a>.</p>
-        <!-- To add the official Loughborough University logo: place the brand asset from the uni brand portal at images/lboro-logo.png and add
-             <img src="images/lboro-logo.png" alt="Loughborough University" style="height:40px;margin-top:18px"> -->
       </div>
       <div>
         <h5>Contact</h5>
