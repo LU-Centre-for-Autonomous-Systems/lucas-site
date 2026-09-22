@@ -87,7 +87,7 @@ h1{font-family:'Archivo',sans-serif;font-size:clamp(38px,5.4vw,64px);font-weight
 
 /* ---------- research ---------- */
 .research{background:transparent}
-.research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.research-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
 .rcard{background:#fff;border:1px solid rgba(255,255,255,.2);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s}
 .rcard:hover{transform:translateY(-3px)}
 .rcard-img{aspect-ratio:16/9;overflow:hidden;border-bottom:3px solid #6D3AC9}
@@ -291,29 +291,36 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
   <div class="wrap">
     <div class="section-head">
       <span class="label">Research</span>
-      <h2>Three core directions</h2>
+      <h2>Four core directions</h2>
       <p>Research in LUCAS is of a significant interdisciplinary nature across engineering, computer science, transport, agriculture and the environment.</p>
     </div>
     <div class="research-grid">
       <div class="rcard">
-        <div class="rcard-img"><img src="images/slider/autonomous_control_systems.jpg" alt="Autonomous control systems" loading="lazy"></div>
+        <div class="rcard-img"><img src="images/slider/research_hazard.jpg" alt="Autonomous robotic search for a gas source" loading="lazy"></div>
         <div class="rcard-body">
-        <h3>Development of autonomous system technologies</h3>
-        <p>Development of advanced algorithms and methods for autonomous vehicles such as autopilot, situation awareness, path planning, and decision making. Particular focuses are on unmanned aerial vehicles and intelligent ground vehicles.</p>
+        <h3>Autonomous search in hazardous environments</h3>
+        <p>Robots and drones that locate, map and track chemical and gas releases in cluttered, GPS-denied spaces, uniting probabilistic source-term estimation with real-time informative path planning.</p>
         </div>
       </div>
       <div class="rcard">
-        <div class="rcard-img"><img src="images/slider/drones_ground_vehicles.jpg" alt="Drones and ground vehicles" loading="lazy"></div>
+        <div class="rcard-img"><img src="images/slider/field_deployment_orchard.jpg" alt="Autonomous ground robot in an orchard" loading="lazy"></div>
         <div class="rcard-body">
-        <h3>Ensuring the safety of autonomous systems</h3>
-        <p>Development of contingency management to enable safe operation of autonomous vehicles and of new techniques and procedures to support verification and validation of new autonomous functions and systems to provide assurance.</p>
+        <h3>Precision agriculture and horticulture</h3>
+        <p>Autonomous ground robots and UAVs for crop and orchard monitoring, navigation and intervention, developed and field-tested with industry partners through projects such as AREA-H and POME.</p>
         </div>
       </div>
       <div class="rcard">
-        <div class="rcard-img"><img src="images/slider/remote_sensing_drone_intervention.jpg" alt="Remote sensing and drone intervention" loading="lazy"></div>
+        <div class="rcard-img"><img src="images/slider/uav_flight_arena.jpg" alt="UAV in flight during a field trial" loading="lazy"></div>
         <div class="rcard-body">
-        <h3>Application of autonomous system technologies</h3>
-        <p>An ever-growing research direction, applying artificial intelligence, data mining, target tracking and autonomous system technologies across a wide range of sectors. Current focuses include precision agriculture, emergency response to hazardous material releases, defence, intelligent mobility and environment monitoring.</p>
+        <h3>Defence, tracking and decision-making</h3>
+        <p>Estimation, multi-target tracking and sequential decision-making under uncertainty, supporting situational awareness and autonomous operations for defence and security.</p>
+        </div>
+      </div>
+      <div class="rcard">
+        <div class="rcard-img"><img src="images/slider/research_spot.jpg" alt="Quadruped robot carrying LiDAR and gas sensors" loading="lazy"></div>
+        <div class="rcard-body">
+        <h3>Multi-sensor field robotics</h3>
+        <p>Robots that fuse LiDAR, gas and vision sensing to perceive, navigate and operate in unstructured, real-world environments, from the laboratory to field trials.</p>
         </div>
       </div>
     </div>
@@ -371,15 +378,21 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
     </div>
 
     <div class="people-grid" id="members-grid">
-      <div class="person" data-cat="academic"><a href="https://www.lboro.ac.uk/departments/aae/people/cunjia-liu/"><div class="ph"><img src="images/teampic/Cunjia.jpg" alt="Prof. Cunjia Liu" loading="lazy"></div><h4>Prof. Cunjia Liu</h4><span>Head of LUCAS · Professor of Robotics and Autonomous Systems</span></a></div>
+      <div class="person" data-cat="academic" data-web="https://www.cunjialiu.com/"><a href="https://www.lboro.ac.uk/departments/aae/people/cunjia-liu/"><div class="ph"><img src="images/teampic/Cunjia.jpg" alt="Prof. Cunjia Liu" loading="lazy"></div><h4>Prof. Cunjia Liu</h4><span>Head of LUCAS · Professor of Robotics and Autonomous Systems</span></a></div>
       <div class="person" data-cat="academic"><a href="https://www.lboro.ac.uk/departments/aae/people/wen-hua-chen/"><div class="ph"><img src="images/teampic/wen.jpg" alt="Prof. Wen-Hua Chen" loading="lazy"></div><h4>Prof. Wen-Hua Chen</h4><span>Former Head of LUCAS · Professor in Autonomous Vehicles</span></a></div>
+      <!-- hidden Sep 2026, not currently with LUCAS:
       <div class="person" data-cat="academic"><a href="https://www.lboro.ac.uk/departments/aae/people/thomas-steffen/"><div class="ph"><img src="images/teampic/Thomas.jpeg" alt="Dr. Thomas Steffen" loading="lazy"></div><h4>Dr. Thomas Steffen</h4><span>Reader in Control of Energy Systems</span></a></div>
+      -->
       <div class="person" data-cat="academic"><a href="https://www.lboro.ac.uk/departments/aae/people/matthew-coombes/"><div class="ph"><img src="images/teampic/Matt.jpeg" alt="Dr. Matthew Coombes" loading="lazy"></div><h4>Dr. Matthew Coombes</h4><span>Senior Lecturer in Autonomous Vehicles</span></a></div>
       <div class="person" data-cat="academic"><a href="https://www.lboro.ac.uk/departments/aae/people/jingjing-jiang/"><div class="ph"><img src="images/teampic/Jingjing.jpeg" alt="Dr. Jingjing Jiang" loading="lazy"></div><h4>Dr. Jingjing Jiang</h4><span>Senior Lecturer in Intelligent Mobility and Autonomous Vehicles</span></a></div>
       <div class="person" data-cat="academic"><a href="https://www.lboro.ac.uk/departments/aae/people/james-knowles/"><div class="ph"><img src="images/teampic/James.jpeg" alt="Dr. James Knowles" loading="lazy"></div><h4>Dr. James Knowles</h4><span>Senior Lecturer in Dynamics and Control</span></a></div>
+      <!-- hidden Sep 2026, not currently with LUCAS:
       <div class="person" data-cat="academic"><a href="https://www.lboro.ac.uk/departments/aae/people/miguel-martinez-garcia/"><div class="ph"><span class="ph-init">MM</span><img src="images/teampic/miguel-martinez-garcia.jpg" alt="Dr. Miguel Martínez García" loading="lazy" onerror="this.remove()"></div><h4>Dr. Miguel Martínez García</h4><span>Senior Lecturer in Machine Intelligence</span></a></div>
+      -->
       <div class="person" data-cat="academic"><a href="https://www.lboro.ac.uk/departments/aae/people/chengyuan-liu/"><div class="ph"><img src="images/teampic/Chengyuan.jpeg" alt="Dr. Chengyuan Liu" loading="lazy"></div><h4>Dr. Chengyuan Liu</h4><span>Lecturer in Safety-Critical Control</span></a></div>
+      <!-- hidden Sep 2026, not currently with LUCAS:
       <div class="person" data-cat="academic"><a href="https://www.lboro.ac.uk/departments/aae/people/yuanjian-zhang/"><div class="ph"><img src="images/teampic/yuanjian.jpeg" alt="Dr. Yuanjian Zhang" loading="lazy"></div><h4>Dr. Yuanjian Zhang</h4><span>Lecturer in Intelligent Electric Vehicles</span></a></div>
+      -->
       <div class="person" data-cat="ra"><a href="https://www.linkedin.com/in/shuoyuan-xu-289b1ba8/"><div class="ph"><img src="images/teampic/Shuoyuan.jpeg" alt="Dr. Shuoyuan Xu" loading="lazy"></div><h4>Dr. Shuoyuan Xu</h4><span>Research Associate</span></a></div>
       <div class="person" data-cat="ra"><div class="ph"><span class="ph-init">BC</span><img src="images/teampic/boliang-cai.jpg" alt="Dr. Boliang Cai" loading="lazy" onerror="this.remove()"></div><h4>Dr. Boliang Cai</h4><span>Research Associate</span></div>
       <div class="person" data-cat="phd"><div class="ph"><span class="ph-init">MF</span><img src="images/phd/mal-fazliu.jpg" alt="Mal Fazliu" loading="lazy" onerror="this.remove()"></div><h4>Mal Fazliu</h4><span>PhD Student</span></div>
@@ -395,6 +408,7 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
       <div class="person" data-cat="phd"><div class="ph"><span class="ph-init">SG</span><img src="images/phd/shanqi-guo.jpg" alt="Shanqi Guo" loading="lazy" onerror="this.remove()"></div><h4>Shanqi Guo</h4><span>PhD Student</span></div>
     </div>
 
+    <!-- Alumni section hidden at supervisor's request (Sep 2026). Remove this line and the closing comment marker below to restore.
     <div class="team-cat">Alumni</div>
     <ul class="names-cols">
       <li>Prof. Jun Yang <em>· Professor, HKUST (Guangzhou)</em></li>
@@ -442,6 +456,7 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
       <li>Xuan-Toa Tran</li>
       <li>Xinming Wang</li>
     </ul>
+    -->
   </div>
 </section>
 
