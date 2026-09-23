@@ -87,14 +87,14 @@ h1{font-family:'Archivo',sans-serif;font-size:clamp(38px,5.4vw,64px);font-weight
 
 /* ---------- research ---------- */
 .research{background:transparent}
-.research-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.research-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .rcard{background:#fff;border:1px solid rgba(255,255,255,.2);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s}
 .rcard:hover{transform:translateY(-3px)}
 .rcard-img{aspect-ratio:16/9;overflow:hidden;border-bottom:3px solid #6D3AC9}
 .rcard-img img{width:100%;height:100%;object-fit:cover}
-.rcard-body{padding:28px 28px 32px}
-.rcard h3{font-family:'Archivo',sans-serif;font-size:19.5px;font-weight:600;color:var(--purple-deep);line-height:1.3;margin-bottom:12px}
-.rcard p{font-size:14.8px;color:var(--muted)}
+.rcard-body{padding:22px 22px 26px}
+.rcard h3{font-family:'Archivo',sans-serif;font-size:17.5px;font-weight:600;color:var(--purple-deep);line-height:1.28;margin-bottom:10px}
+.rcard p{font-size:13.8px;color:var(--muted);line-height:1.5}
 
 /* ---------- projects ---------- */
 .proj{display:grid;grid-template-columns:230px 1fr;gap:44px;padding:40px 0;border-bottom:1px solid rgba(255,255,255,.12)}
@@ -176,7 +176,7 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
   .strip{grid-template-columns:repeat(2,1fr)}
   .people-grid{grid-template-columns:repeat(3,1fr)}
   .about-grid{grid-template-columns:1fr}
-  .research-grid{grid-template-columns:1fr}
+  .research-grid{grid-template-columns:repeat(2,1fr)}
   .foot-grid{grid-template-columns:1fr 1fr}
   .names-cols{columns:2}
 }
@@ -189,6 +189,7 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
   .news-item{grid-template-columns:1fr;gap:4px}
   .foot-grid{grid-template-columns:1fr}
   .section{padding:72px 0}
+  .research-grid{grid-template-columns:1fr}
   .names-cols{columns:1}
 }
 
@@ -296,31 +297,31 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
     </div>
     <div class="research-grid">
       <div class="rcard">
-        <div class="rcard-img"><img src="images/slider/research_hazard.jpg" alt="Autonomous robotic search for a gas source" loading="lazy"></div>
-        <div class="rcard-body">
-        <h3>Autonomous search in hazardous environments</h3>
-        <p>Robots and drones that locate, map and track chemical and gas releases in cluttered, GPS-denied spaces, uniting probabilistic source-term estimation with real-time informative path planning.</p>
-        </div>
-      </div>
-      <div class="rcard">
-        <div class="rcard-img"><img src="images/slider/field_deployment_orchard.jpg" alt="Autonomous ground robot in an orchard" loading="lazy"></div>
+        <div class="rcard-img"><img src="images/slider/research_agri.jpg" alt="Autonomous ground robot on trials in an orchard" loading="lazy"></div>
         <div class="rcard-body">
         <h3>Precision agriculture and horticulture</h3>
         <p>Autonomous ground robots and UAVs for crop and orchard monitoring, navigation and intervention, developed and field-tested with industry partners through projects such as AREA-H and POME.</p>
         </div>
       </div>
       <div class="rcard">
-        <div class="rcard-img"><img src="images/slider/uav_flight_arena.jpg" alt="UAV in flight during a field trial" loading="lazy"></div>
+        <div class="rcard-img"><img src="images/slider/research_defence.jpg" alt="UAV carrying a payload during an indoor flight trial" loading="lazy"></div>
         <div class="rcard-body">
         <h3>Defence, tracking and decision-making</h3>
         <p>Estimation, multi-target tracking and sequential decision-making under uncertainty, supporting situational awareness and autonomous operations for defence and security.</p>
         </div>
       </div>
       <div class="rcard">
-        <div class="rcard-img"><img src="images/slider/research_spot.jpg" alt="Quadruped robot carrying LiDAR and gas sensors" loading="lazy"></div>
+        <div class="rcard-img"><img src="images/slider/research_spot.jpg" alt="Quadruped robot carrying a LiDAR and gas-sensing payload" loading="lazy"></div>
         <div class="rcard-body">
         <h3>Multi-sensor field robotics</h3>
         <p>Robots that fuse LiDAR, gas and vision sensing to perceive, navigate and operate in unstructured, real-world environments, from the laboratory to field trials.</p>
+        </div>
+      </div>
+      <div class="rcard">
+        <div class="rcard-img"><img src="images/slider/research_gasmap.jpg" alt="Gas concentration map produced by an autonomous search robot" loading="lazy"></div>
+        <div class="rcard-body">
+        <h3>Autonomous search in hazardous environments</h3>
+        <p>Robots and drones that locate, map and track chemical and gas releases in cluttered, GPS-denied spaces, uniting probabilistic source-term estimation with real-time informative path planning.</p>
         </div>
       </div>
     </div>
