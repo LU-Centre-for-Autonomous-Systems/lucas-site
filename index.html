@@ -679,7 +679,7 @@ function applyPubs(){
   const btn = document.getElementById('pub-more');
   if (matched.length > PUB_LIMIT){
     btn.style.display = 'inline-block';
-    btn.textContent = pubState.expanded ? 'Show fewer' : 'Show all ' + matched.length;
+    btn.textContent = pubState.expanded ? 'Show fewer' : 'Show all';
   } else { btn.style.display = 'none'; }
 }
 document.querySelectorAll('#pub-filters .fbtn').forEach(b=>{
@@ -706,7 +706,7 @@ function applyNews(){
   const btn = document.getElementById('news-more');
   if (items.length > NEWS_LIMIT){
     btn.style.display = 'inline-block';
-    btn.textContent = newsExpanded ? 'Show fewer' : 'Show all ' + items.length;
+    btn.textContent = newsExpanded ? 'Show fewer' : 'Show all';
   } else { btn.style.display = 'none'; }
 }
 document.getElementById('news-more').addEventListener('click', ()=>{
