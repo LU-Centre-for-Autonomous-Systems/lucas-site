@@ -144,6 +144,7 @@ h1{font-family:'Archivo',sans-serif;font-size:clamp(38px,5.4vw,64px);font-weight
 .pub-m{display:block;font-size:13.5px;color:#5f5768;margin-top:5px}
 .pub-v{display:block;font-size:13px;color:#4C1D95;font-weight:600;margin-top:3px}
 .pub.hidden{display:none}
+.news-item.hidden{display:none}
 
 /* ---------- join ---------- */
 .join{background:#1D0640;color:#fff;text-align:left;border-top:3px solid #A78BFA}
@@ -497,6 +498,7 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
     <div class="news-item"><div class="news-date">Jul 2023</div><div><b>Congratulations</b>: Unmanned Systems’ Annual Best Paper Award: “Machine Learning-Based Crop Drought Mapping System by UAV Remote Sensing RGB Imagery” by Jinya Su, Matthew Coombes, Cunjia Liu, Yongchao Zhu, Xingyang Song, Shibo Fang, Lei Guo and Wen-Hua Chen.</div></div>
     <div class="news-item"><div class="news-date">Jan 2023</div><div><b>Congratulations</b>: Dr Jingjing Jiang has been promoted to Senior Lecturer.</div></div>
     <div class="news-item"><div class="news-date">Dec 2022</div><div><b>Congratulations</b>: <a href="https://www.lboro.ac.uk/internal/news/2022/december/academic-elevated-to-ieee-fellow/" style="text-decoration:underline">Dr Jun Yang has been named an IEEE Fellow</a>.</div></div>
+    <button class="fbtn" id="news-more" style="margin-top:26px"></button>
   </div>
 </section>
 
@@ -694,6 +696,25 @@ document.getElementById('pub-more').addEventListener('click', ()=>{
   applyPubs();
 });
 applyPubs();
+
+// ---------- news: show the most recent few, expand on demand ----------
+const NEWS_LIMIT = 6;
+let newsExpanded = false;
+function applyNews(){
+  const items = Array.from(document.querySelectorAll('#news .news-item'));
+  items.forEach((n, i)=>n.classList.toggle('hidden', !newsExpanded && i >= NEWS_LIMIT));
+  const btn = document.getElementById('news-more');
+  if (items.length > NEWS_LIMIT){
+    btn.style.display = 'inline-block';
+    btn.textContent = newsExpanded ? 'Show fewer' : 'Show all ' + items.length;
+  } else { btn.style.display = 'none'; }
+}
+document.getElementById('news-more').addEventListener('click', ()=>{
+  newsExpanded = !newsExpanded;
+  applyNews();
+  if (!newsExpanded) document.getElementById('news').scrollIntoView({ behavior: 'smooth' });
+});
+applyNews();
 
 document.querySelectorAll('#team .person').forEach(p=>{
   p.style.cursor='pointer';
