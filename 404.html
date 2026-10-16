@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUCAS · Redirecting</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/images/favicon.ico">
+<script>
+// Old-site pages mapped to the matching section of the single-page site; anything else goes home.
+(function(){
+  var map = {
+    'people': '#team', 'team': '#team', 'members': '#team', 'staff': '#team',
+    'research': '#research', 'projects': '#projects', 'project': '#projects',
+    'news': '#news', 'publications': '#publications', 'publication': '#publications', 'papers': '#publications',
+    'about': '#about', 'join': '#join', 'vacancies': '#join', 'contact': '#join', 'opportunities': '#join'
+  };
+  var p = location.pathname.toLowerCase().replace(/\.(html?|php)$/, '').replace(/\/+$/, '').split('/').pop() || '';
+  location.replace('/' + (map[p] || ''));
+})();
+</script>
+<style>body{font-family:Inter,system-ui,sans-serif;background:#26094B;color:#EDE8F8;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0}</style>
+</head>
+<body>
+<p>This page has moved. <a href="/" style="color:#C7B3F2">Go to the LUCAS homepage</a>.</p>
+</body>
+</html>
