@@ -239,6 +239,9 @@ footer{padding:72px 0 44px;background:#14032B;color:#CFC5E8}
 .hl-item .label{margin-bottom:8px}
 .hl-item .hl-t{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14.5px;line-height:1.45;color:#EDE8F8}
 .hl-item .hl-more{display:inline-block;margin-top:10px;font-size:13px;font-weight:600;color:#C7B3F2}
+section,.news-item{scroll-margin-top:100px}
+.news-item{transition:background .6s}
+.news-item.flash{background:#EFEAF8}
 .rcard-link{display:inline-block;margin-top:12px;font-size:13px;font-weight:600;color:#4C1D95}
 .rcard{cursor:pointer}
 .pub-dirbar{margin-top:-24px;margin-bottom:40px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
@@ -776,8 +779,16 @@ document.querySelectorAll('.rcard[data-dir]').forEach(c=>{
     const label = (n.querySelector('b')||{}).textContent || 'News';
     const link = n.querySelector('a');
     const body = n.children[1].textContent.replace(/^\s*[^:]+:\s*/,'').trim();
-    const a = document.createElement('a'); a.className='hl-item'; a.href = link ? link.href : '#news';
+    if (!n.id) n.id = 'news-' + (all.indexOf(n) + 1);
+    const a = document.createElement('a'); a.className='hl-item'; a.href = link ? link.href : '#' + n.id;
     if (link) { a.target='_blank'; a.rel='noopener'; }
+    else a.addEventListener('click', e=>{
+      e.preventDefault();
+      if (n.classList.contains('hidden')) { newsExpanded = true; applyNews(); }
+      n.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      n.classList.add('flash'); setTimeout(()=>n.classList.remove('flash'), 2200);
+      history.replaceState(null, '', '#' + n.id);
+    });
     a.innerHTML = '<span class="label">'+label+'</span><span class="hl-t">'+body+'</span><span class="hl-more">'+(link?'Read more \u2192':'See news \u2192')+'</span>';
     grid.appendChild(a);
   });
